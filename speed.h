@@ -15,6 +15,12 @@ class Speed : public Car{
 
         void set_speed(int);
 
+        int calculate_score();
+
+        int get_score(int);
+
+        int calculate_score(int) override;
+
 };
 
 
@@ -33,6 +39,11 @@ int Speed::get_speed(){
 
 void Speed::set_speed(int spe){
     speed =spe;
+}
+
+int Speed::calculate_score(int sco) {
+    tire_type = sco + 3;
+    return tire_type;
 }
 
 
