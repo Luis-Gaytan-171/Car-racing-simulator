@@ -5,14 +5,18 @@
 
 class Balanced : public Car {
 private:
-    int stability; // 1 - 100
+    int stability; // Rango: 1 - 100
+
 public:
     // Constructor
-    Balanced(int enginePower, int stability);
+    Balanced(int enginePower, int stability, string name);
 
     // Getter y Setter de stability
     int getStability() const;
     void setStability(int stability);
+
+    // Sobrescritura del método calculateScore
+    int calculateScore(int driverExperience, int driverRisk) const override;
 };
 
 #endif // BALANCED_H
